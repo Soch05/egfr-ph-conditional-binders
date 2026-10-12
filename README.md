@@ -2,7 +2,9 @@
 
 Working repository for a submission to **Challenge 1 of the Anthropic × Adaptyv Protein
 Design Competition**, Track 3. Single participant, self-funded, one rented L40S and one 2018
-laptop CPU. Total GPU spend: about 4 US dollars.
+laptop CPU. Total GPU spend on the EGFR work: about **16 US dollars** — roughly 10 on the two
+generation campaigns, 2 on an earlier smoke test, and 4 on the pKa and orthogonal evaluation
+runs. Every run is costed in [`NOTES.md`](NOTES.md).
 
 The task was a conditional binder: one that binds human EGFR at pH 6.5, does not bind at
 pH 7.4, and also recognises the mouse orthologue.

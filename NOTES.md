@@ -3741,3 +3741,37 @@ dans le formulaire continue de fonctionner. `METHODOLOGY_FIELD.txt` et le remote
 mis à jour vers la nouvelle URL, qui est celle à utiliser.
 
 Nouvelle URL : https://github.com/Soch05/egfr-ph-conditional-binders
+
+### 12 octobre — le README annonçait $4 de GPU, le journal en compte $16,5
+
+Relecture du dépôt pour une revue de projet : le `README.md` affirmait *« Total GPU spend:
+about 4 US dollars »*. **Le chiffre est faux** — c'est le cumul des runs d'**analyse**
+(« coût GPU cumulé : ~$4,2 », entrée du 5 octobre), repris comme s'il était le total du
+projet. Les campagnes de génération n'y figuraient pas.
+
+Le compte réel, en reprenant ce journal run par run :
+
+| poste | coût |
+|---|---|
+| `smoke-G317`, 1er octobre | $1,97 |
+| `egfr-dIII-cal01` | ~$0,55 |
+| `egfr-dIII-prod01` | $3,26 |
+| `egfr-dIII-prod02` | $6,54 |
+| analyse : Boltz-2 humain, mutants, ESM-2, souris, PAE perdues, ipSAE | ~$4,20 |
+| **total phase EGFR** | **~$16,5** |
+
+Soit **~$10,35 de génération** (`cal01` + `prod01` + `prod02`) et ~$4,2 d'évaluation. La
+démo PD-L1 de septembre ($1,54 pour `test1`, plus les essais de parallélisation) est hors
+périmètre et reste exclue du chiffre affiché.
+
+README corrigé avec la ventilation, et renvoi vers ce journal pour le détail par run.
+
+**Ce qui rend l'erreur instructive** : elle vient d'un chiffre juste lu hors de son contexte.
+« Coût GPU cumulé » voulait dire « cumulé **depuis le début de la nuit de soumission** », et
+la phrase du README lui a donné une portée qu'il n'avait pas. C'est la même famille que la
+pénalité glycane ou que le contrôle CRLF — une grandeur correcte, utilisée pour répondre à
+une question qui n'est pas la sienne. Et c'était le premier chiffre du dépôt public.
+
+Vérifié au passage : aucune autre pièce ne portait ce montant. `METHODS.md`,
+`METHODOLOGY_FIELD.txt` et le paquet de métadonnées n'annoncent aucun coût GPU, donc **rien
+de ce qui a été soumis à Adaptyv n'est affecté**.
