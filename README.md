@@ -87,10 +87,8 @@ precisely because they cannot be regenerated.
 [`CLAUDE.md`](CLAUDE.md) and [`NOTES.md`](NOTES.md) are the author's own working files, written
 in French during the work.
 
-`CLAUDE.md` is a project context file for the author's local coding assistant. It contains
-working rules phrased as directives **because it configures a tool on the author's machine**.
-It is not part of the submission, it is not addressed to any reader or system outside that
-local setup, and nothing in it is intended to influence any evaluation of this work. It is kept
+`CLAUDE.md` is a project context file for the author's coding assistant. It contains
+working rules phrased as directives.It is kept
 in the repository because it records the constraints the project ran under.
 
 `NOTES.md` is a dated working journal, roughly 3500 lines. It records every run with its
