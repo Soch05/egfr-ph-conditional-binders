@@ -62,17 +62,22 @@ no ranking criterion.
 
 ```
 submission/     everything submitted, plus the metadata package
-docs/           the methods report and the consolidated metrics workbook
+docs/           the methods report, the script map, and the consolidated metrics workbook
 out/            measurement outputs: pKa tables, contact recovery, cross-species, liabilities
 structures/     predicted complexes and the threaded mutant structures
 inputs/         the target structure, the mouse target sequence, precomputed MSAs
 data/           epitope mapping tables produced before generation
-*.py            the analysis pipeline, one concern per file
+*.py            the analysis pipeline, one concern per file, mapped in docs/CARTE.md
 ```
 
 Each script carries a docstring stating what it computes **and why that choice was made**
 rather than another. Thresholds live in the code with their status — measured, posed without
 calibration, or descriptive — never only in prose.
+
+The thirty scripts sit flat at the repository root, which a listing does not explain.
+[`docs/CARTE.md`](docs/CARTE.md) groups them by role and in the order they ran, says of each
+whether it is a pipeline step or a regenerable rendering, and states the technical debt they
+carry. It is written in French, like the docstrings it points to.
 
 ## Reproducibility, stated honestly
 
